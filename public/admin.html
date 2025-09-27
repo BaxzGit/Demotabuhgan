@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — Tabungan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <h2>Admin Login</h2>
+      <input id="admin_pass" placeholder="Password admin" />
+      <button id="btnAdminLogin">Masuk</button>
+    </div>
+
+    <div id="adminPanel" class="hidden">
+      <div class="card">
+        <h3>Users</h3>
+        <table id="usersTable" border="0" width="100%"></table>
+      </div>
+      <div class="card">
+        <h3>Withdrawals</h3>
+        <table id="withTable" border="0" width="100%"></table>
+      </div>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

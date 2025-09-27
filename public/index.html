@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tabungan — Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <button id="menuBtn" class="hamburger">☰</button>
+    <h1>Dashboard</h1>
+  </header>
+
+  <main class="container">
+    <section id="authSection" class="card auth-card">
+      <h2 id="welcomeTitle">Selamat datang di portal user Anda!</h2>
+
+      <div id="forms">
+        <div class="form-row">
+          <input id="reg_username" placeholder="Username" />
+          <input id="reg_phone" placeholder="No HP (contoh 6283...)" />
+          <input id="reg_password" type="password" placeholder="Kata sandi" />
+          <button id="btnRegister">Daftar</button>
+        </div>
+
+        <hr />
+
+        <div class="form-row">
+          <input id="login_phone" placeholder="No HP" />
+          <input id="login_password" type="password" placeholder="Kata sandi" />
+          <button id="btnLogin">Masuk</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <div class="cards-grid">
+        <div class="card small card-green">
+          <div class="card-title">WHATSAPP AKTIF</div>
+          <div class="card-value" id="activeWhats">0</div>
+        </div>
+        <div class="card small card-red">
+          <div class="card-title">WHATSAPP TERPUTUS</div>
+          <div class="card-value">21</div>
+        </div>
+        <div class="card small card-blue">
+          <div class="card-title">BLAST HARI INI</div>
+          <div class="card-value">30</div>
+        </div>
+        <div class="card small card-yellow">
+          <div class="card-title">REWARD HARI INI</div>
+          <div class="card-value">Rp13.500</div>
+        </div>
+      </div>
+
+      <div class="card big card-purple">
+        <div class="card-title">BALANCE</div>
+        <div class="card-balance" id="balanceDisplay">Rp0</div>
+      </div>
+
+      <div class="card card-light">
+        <h3>TAMBAH TABUNGAN (Simulasi)</h3>
+        <div class="form-row">
+          <input id="deposit_amount" placeholder="Nominal (contoh: 50000)" />
+          <button id="btnDeposit">Kirim Setoran</button>
+        </div>
+        <p>Metode topup: DANA 083109195308 / QRIS (tampilkan di kasir)</p>
+      </div>
+
+      <div class="card card-light">
+        <h3>TARIK SALDO</h3>
+        <div class="form-row">
+          <input id="withdraw_amount" placeholder="Nominal penarikan (min Rp20.000)" />
+          <input id="withdraw_name" placeholder="Atas Nama" />
+          <select id="withdraw_method">
+            <option value="DANA">DANA</option>
+            <option value="QRIS">QRIS</option>
+            <option value="BANK">Bank</option>
+          </select>
+          <input id="withdraw_wallet" placeholder="No Rek / e-wallet" />
+          <button id="btnWithdraw">Ajukan Penarikan (WhatsApp)</button>
+        </div>
+        <small>Penarikan akan diproses oleh admin setelah verifikasi via WhatsApp</small>
+      </div>
+
+      <div class="card card-light">
+        <button id="btnLogout">Keluar</button>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
